@@ -25,7 +25,7 @@ powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.c
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/CypherTroopers/onclick-colossusX/main/colossusX_arm64.sh)
 ```
-Because a huge DAG is pre-generated, the time required before mining actually starts depends on your environment (usually around 5 to 30 minutes).
+Mining starts after generating the massive DAG, so the time required before actual mining begins depends on your environment (typically around 5 to 30 minutes)
 
 A few minutes after running the script, you will be asked to enter a password.
 This is the password for your colossusx mining account.
