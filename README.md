@@ -36,4 +36,9 @@ Do not forget it.
 Next, you will need to enter the wallet address for receiving mining rewards.
 This should be your normal EVM wallet address, such as a MetaMask wallet address.
 Mining rewards will be sent to that wallet.
+![image](https://github.com/user-attachments/assets/5a4ffde4-4ea9-4d64-aab1-55aadb16e23b)
+
+
 ![image](https://github.com/user-attachments/assets/6bcd56ef-5312-4634-84df-1ccd938b2515)
+
+
