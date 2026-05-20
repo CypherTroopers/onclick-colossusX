@@ -30,10 +30,9 @@ Because a huge DAG is pre-generated, the time required before mining actually st
 A few minutes after running the script, you will be asked to enter a password.
 This is the password for your colossusx mining account.
 It can be any length.
-
 However, if you forget this password, you will not be able to restart mining after a node restart or server downtime, and you will need to create a new mining account.
 Do not forget it.
-
+![image](https://github.com/user-attachments/assets/8a0d3a5b-59cf-40fa-81fd-0f33a448804f)
 Next, you will need to enter the wallet address for receiving mining rewards.
 
 This should be your normal EVM wallet address, such as a MetaMask wallet address.
