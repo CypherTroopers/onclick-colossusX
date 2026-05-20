@@ -34,6 +34,6 @@ However, if you forget this password, you will not be able to restart mining aft
 Do not forget it.
 ![image](https://github.com/user-attachments/assets/8a0d3a5b-59cf-40fa-81fd-0f33a448804f)
 Next, you will need to enter the wallet address for receiving mining rewards.
-
 This should be your normal EVM wallet address, such as a MetaMask wallet address.
 Mining rewards will be sent to that wallet.
+![image](https://github.com/user-attachments/assets/6bcd56ef-5312-4634-84df-1ccd938b2515)
