@@ -41,4 +41,34 @@ Mining rewards will be sent to that wallet.
 
 ![image](https://github.com/user-attachments/assets/6bcd56ef-5312-4634-84df-1ccd938b2515)
 
+## Check logs
 
+```bash
+pm2 logs 0
+```
+
+## Exit logs
+
+```bash
+Ctrl + C
+```
+
+## Enter the console and inspect the node
+
+### Linux / macOS / PowerShell
+
+```bash
+cd ~/cypher
+```
+
+### Linux / macOS / Apple Silicon Mac
+
+```bash
+./build/bin/cypher attach ipc:./chaindbname/cypher.ipc
+```
+
+### Windows
+
+```powershell
+.\build\bin\cypher.exe attach ipc:\\.\pipe\cypher.ipc
+```
