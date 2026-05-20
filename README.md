@@ -14,10 +14,14 @@ After preparing those, simply copy and paste the command below into your machine
 # Linux ueser
 
 ```bash
-sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/CypherTroopers/onclick-colossusX/main/cypher-oneclick.sh)" root
+sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/CypherTroopers/onclick-colossusX/main/colossusX_linux.sh)" root
 ```
 
 # Windows powershell user
-soon
-# Mac(Apple User)
-soon
+```bash
+powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/CypherTroopers/onclick-colossusX/main/colossusX_powershell.ps1 | iex"
+```
+# Mac(Apple silicon User)
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/CypherTroopers/onclick-colossusX/main/colossusX_arm64.sh)
+```
