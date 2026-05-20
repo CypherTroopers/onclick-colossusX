@@ -25,3 +25,16 @@ powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.c
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/CypherTroopers/onclick-colossusX/main/colossusX_arm64.sh)
 ```
+Because a huge DAG is pre-generated, the time required before mining actually starts depends on your environment (usually around 5 to 30 minutes).
+
+A few minutes after running the script, you will be asked to enter a password.
+This is the password for your colossusx mining account.
+It can be any length.
+
+However, if you forget this password, you will not be able to restart mining after a node restart or server downtime, and you will need to create a new mining account.
+Do not forget it.
+
+Next, you will need to enter the wallet address for receiving mining rewards.
+
+This should be your normal EVM wallet address, such as a MetaMask wallet address.
+Mining rewards will be sent to that wallet.
