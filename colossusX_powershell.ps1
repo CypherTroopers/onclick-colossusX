@@ -2,14 +2,27 @@ $ErrorActionPreference = "Stop"
 
 Write-Host "==> Install Git and Node.js"
 
-winget install --id Git.Git -e --source winget
-winget install --id OpenJS.NodeJS.LTS -e --source winget
+if (!(Get-Command git -ErrorAction SilentlyContinue)) {
+    winget install --id Git.Git -e --source winget
+} else {
+    Write-Host "Git already installed. Skip."
+}
+
+if (!(Get-Command node -ErrorAction SilentlyContinue)) {
+    winget install --id OpenJS.NodeJS.LTS -e --source winget
+} else {
+    Write-Host "Node.js already installed. Skip."
+}
 
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
 Write-Host "==> Install PM2"
 
-npm install -g pm2
+if (!(Get-Command pm2 -ErrorAction SilentlyContinue)) {
+    npm install -g pm2
+} else {
+    Write-Host "PM2 already installed. Skip."
+}
 
 Write-Host "==> Clone Cypherium repo"
 
@@ -56,7 +69,12 @@ $ExtIP = (Invoke-RestMethod -Uri "https://api4.ipify.org").Trim()
 
 Write-Host "==> Start node with PM2"
 
-pm2 delete cypher-node 2>$null
+pm2 describe cypher-node >$null 2>&1
+if ($LASTEXITCODE -eq 0) {
+    pm2 delete cypher-node
+} else {
+    Write-Host "cypher-node not found in PM2. Skip delete."
+}
 
 pm2 start powershell --name cypher-node -- `
   -ExecutionPolicy Bypass `
