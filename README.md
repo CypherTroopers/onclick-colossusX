@@ -56,17 +56,21 @@ Ctrl + C
 ## Enter the console and inspect the node
 
 ### Linux / macOS / PowerShell
-
+Move to the cypher directory.
 ```bash
 cd ~/cypher
 ```
 
-### Linux / macOS / Apple Silicon Mac
+### Linux
 
 ```bash
 ./build/bin/cypher attach ipc:./chaindbname/cypher.ipc
 ```
+###Apple Silicon
 
+```bash
+./build/bin/cypher-darwin-arm64 attach ipc:./chaindbname/cypher.ipc
+```
 ### Windows
 
 ```powershell
