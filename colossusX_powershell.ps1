@@ -69,7 +69,8 @@ $ExtIP = (Invoke-RestMethod -Uri "https://api4.ipify.org").Trim()
 
 Write-Host "==> Start node with PM2"
 
-pm2 start powershell --name cypher-node -- `
+pm2 start powershell --name cypher-node --interpreter powershell -- `
+  -NoProfile `
   -ExecutionPolicy Bypass `
   -File "$PWD\start-cypher.ps1"
 
