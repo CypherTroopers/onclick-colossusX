@@ -69,13 +69,6 @@ $ExtIP = (Invoke-RestMethod -Uri "https://api4.ipify.org").Trim()
 
 Write-Host "==> Start node with PM2"
 
-pm2 describe cypher-node >$null 2>&1
-if ($LASTEXITCODE -eq 0) {
-    pm2 delete cypher-node
-} else {
-    Write-Host "cypher-node not found in PM2. Skip delete."
-}
-
 pm2 start powershell --name cypher-node -- `
   -ExecutionPolicy Bypass `
   -File "$PWD\start-cypher.ps1"
